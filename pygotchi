@@ -25,17 +25,22 @@ states = {
 }
 
 eating = 0.0
+hunger = 0
 while 1:
+    hunger += 1
     tick = clock.tick(20) * 0.001
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_e:
                 eating = 3.0
+                hunger = 0
 
     if eating > 1:
 	eating -= tick
    	current_state = 'eat%d' % (3 - int(eating))
+    elif hunger > 150:
+        current_state = 'sad'
     else:
         current_state = 'content'
     sprite = random.choice(states[current_state])
