@@ -1,0 +1,32 @@
+#! /usr/bin/env python
+import pygame
+import sys
+import random
+import os
+pygame.init()
+clock = pygame.time.Clock()
+
+size = width, height = 320, 240
+speed = [100, 0]
+black = 0, 0, 0
+
+screen = pygame.display.set_mode(size)
+sprites = os.listdir("sprites")
+
+pygotchi = {path: pygame.image.load('sprites/%s' % path) for path in sprites}
+
+states = {
+  'content': [pygotchi[sprite] for sprite in ['normal1.png', 'normal2.png']],
+  'happy': [pygotchi[sprite] for sprite in ['normal3.png']],
+}
+
+while 1:
+    tick = clock.tick(60) * 0.001
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT: sys.exit()
+
+    current_state = 'content'
+
+    screen.fill(black)
+    screen.blit(random.choice(states[current_state]), (150, 100))
+    pygame.display.flip()
