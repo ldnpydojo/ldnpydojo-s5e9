@@ -19,16 +19,27 @@ states = {
   'content': [pygotchi[sprite] for sprite in ['normal1.png', 'normal2.png']],
   'happy': [pygotchi[sprite] for sprite in ['normal3.png']],
   'sad': [pygotchi[sprite] for sprite in ['sad1.png']],
-  'eating': [pygotchi[sprite] for sprite in ['eat1.png', 'eat2.png', 'eat3.png']],
+  'eat1': [pygotchi['eat1.png']],
+  'eat2': [pygotchi['eat2.png']],
+  'eat3': [pygotchi['eat3.png']],
 }
 
+eating = 0.0
 while 1:
     tick = clock.tick(20) * 0.001
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_e:
+                eating = 3.0
 
-    current_state = 'content'
+    if eating > 1:
+	eating -= tick
+   	current_state = 'eat%d' % (3 - int(eating))
+    else:
+        current_state = 'content'
+    sprite = random.choice(states[current_state])
 
     screen.fill(black)
-    screen.blit(random.choice(states[current_state]), (150, 100))
+    screen.blit(sprite, (150, 100))
     pygame.display.flip()
