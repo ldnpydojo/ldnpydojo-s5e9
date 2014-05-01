@@ -18,10 +18,12 @@ pygotchi = {path: pygame.image.load('sprites/%s' % path) for path in sprites}
 states = {
   'content': [pygotchi[sprite] for sprite in ['normal1.png', 'normal2.png']],
   'happy': [pygotchi[sprite] for sprite in ['normal3.png']],
+  'sad': [pygotchi[sprite] for sprite in ['sad1.png']],
+  'eating': [pygotchi[sprite] for sprite in ['eat1.png', 'eat2.png', 'eat3.png']],
 }
 
 while 1:
-    tick = clock.tick(60) * 0.001
+    tick = clock.tick(30) * 0.001
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
 
