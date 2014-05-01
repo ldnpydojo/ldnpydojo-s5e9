@@ -23,7 +23,7 @@ states = {
 }
 
 while 1:
-    tick = clock.tick(30) * 0.001
+    tick = clock.tick(20) * 0.001
     for event in pygame.event.get():
         if event.type == pygame.QUIT: sys.exit()
 
