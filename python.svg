@@ -17,7 +17,29 @@
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="python.svg">
   <defs
-     id="defs4" />
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4511">
+      <stop
+         style="stop-color:#b3b3b3;stop-opacity:1;"
+         offset="0"
+         id="stop4513" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop4515" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4511"
+       id="linearGradient4517"
+       x1="195"
+       y1="410.36218"
+       x2="195"
+       y2="431.38599"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
   <sodipodi:namedview
      id="base"
      pagecolor="#ffffff"
@@ -26,7 +48,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="396.05196"
+     inkscape:cx="395.05196"
      inkscape:cy="720.877"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -34,7 +56,7 @@
      inkscape:window-width="1301"
      inkscape:window-height="744"
      inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:window-y="306"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
@@ -1276,6 +1298,32 @@
              sodipodi:nodetypes="ccc" />
         </g>
       </g>
+    </g>
+    <g
+       id="g4523"
+       inkscape:export-filename="/home/mauve/dev/tamagotchi/sprites/but_eat.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90">
+      <rect
+         ry="6.4329529"
+         rx="6.4329529"
+         y="404.36218"
+         x="145"
+         height="32"
+         width="102"
+         id="rect4509"
+         style="color:#000000;fill:url(#linearGradient4517);fill-opacity:1;fill-rule:evenodd;stroke:#666666;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text4519"
+         y="428.63623"
+         x="177.62085"
+         style="font-size:23.43741226px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Khmer OS;-inkscape-font-specification:Khmer OS"
+         xml:space="preserve"><tspan
+           y="428.63623"
+           x="177.62085"
+           id="tspan4521"
+           sodipodi:role="line">Eat</tspan></text>
     </g>
   </g>
 </svg>
